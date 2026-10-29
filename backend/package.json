@@ -23,7 +23,9 @@
     "test:watch": "vitest",
     "test:cov": "vitest run --coverage",
     "test:debug": "vitest --inspect-brk --no-file-parallelism",
-    "test:e2e": "vitest run --config ./vitest.config.e2e.ts"
+    "test:e2e": "vitest run --config ./vitest.config.e2e.ts",
+    "test:db": "vitest run --config ./vitest.config.db.ts",
+    "test:all": "vitest run && vitest run --config ./vitest.config.e2e.ts && vitest run --config ./vitest.config.db.ts"
   },
   "dependencies": {
     "@nestjs/common": "^12.0.1",
@@ -50,6 +52,7 @@
     "@types/pg": "^8.23.1",
     "@types/supertest": "^7.0.0",
     "@vitest/coverage-v8": "^4.1.2",
+    "embedded-postgres": "^18.4.0-beta.17",
     "oxlint": "^1.58.0",
     "prettier": "^3.4.2",
     "prisma": "^7.10.1",
